@@ -14,7 +14,7 @@ import AreaTabs from '@components/organisms/AreaTabs'
 
 import { useTranslation } from 'react-i18next'
 import { StaticQuery, graphql } from "gatsby"
-import { withLanguage } from '@/utils/locale'
+import { withLanguage } from '@/utils/i18n'
 
 const QUERY_FETCH_AREA = graphql`
   query {

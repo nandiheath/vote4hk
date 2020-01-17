@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import Typography from '@material-ui/core/Typography'
-import React from 'react'
-import { COLORS } from 'ui/theme'
+import styled from '@/components/atoms/texts/node_modules/styled-components'
+import Typography from '@/components/atoms/texts/node_modules/@material-ui/core/Typography'
+import React from '@/components/atoms/texts/node_modules/react'
+import { COLORS } from '@/components/atoms/texts/node_modules/ui/theme'
 
 export default styled(Typography)`
   && {

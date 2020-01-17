@@ -1,11 +1,16 @@
 import React from "react"
-import Layout from "@/components/templates/layout"
+import Layout from "@/components/templates/Layout"
+import App from "@/components/templates/App"
 import DistrictSelector from "@/components/organisms/DistrictSelector"
+import SearchBox from '@/components/organisms/SearchBox';
 
 const IndexPage = (props) => {
-  return < Layout locale={props.pageContext.locale}>
-    <DistrictSelector />
-  </Layout >
+  return <App locale={props.pageContext.locale}>
+    < Layout>
+      <DistrictSelector />
+      <SearchBox />
+    </Layout >
+  </App>
 }
 
 export default IndexPage

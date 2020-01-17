@@ -7,41 +7,30 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import SearchDrawer from '@/components/organisms/SearchDrawer'
-import { ContextStoreProvider } from '@/contextStore'
-import NavBar from "../organisms/NavBar"
-import { ThemeProvider } from '@material-ui/core/styles/'
-import theme from '@/ui/theme'
-import '@/i18n'
-import { useTranslation } from 'react-i18next'
+import SearchDrawer from "@components/organisms/SearchDrawer"
+import NavBar from "@components/organisms/NavBar"
 
 const Layout = (props) => {
-  const { children, locale } = props
-  const { i18n } = useTranslation()
-  i18n.changeLanguage(locale)
+  const { children } = props
   return (<>
-    <ContextStoreProvider>
-      <ThemeProvider theme={theme}>
-        <SearchDrawer />
+    <SearchDrawer />
 
-        <main>
-          <NavBar></NavBar>
-          {children}
-        </main>
+    <main>
+      <NavBar></NavBar>
+      {children}
+    </main>
 
-        {/* <main>{children}</main> */}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </ThemeProvider>
-    </ContextStoreProvider>
+    {/* <main>{children}</main> */}
+    <footer>
+      © {new Date().getFullYear()}, Built with
+  {` `}
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
+    </footer>
   </>)
 }
+
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  locale: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
